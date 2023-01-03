@@ -138,8 +138,7 @@ open class SPQRCameraController: SPController {
         AVMetadataObject.ObjectType.qr,
         AVMetadataObject.ObjectType.ean13,
         AVMetadataObject.ObjectType.ean8,
-        AVMetadataObject.ObjectType.dataMatrix,
-        AVMetadataObject.ObjectType.microQR
+        AVMetadataObject.ObjectType.dataMatrix
     ]
     
     internal func makeVideoPreviewLayer() -> AVCaptureVideoPreviewLayer {
