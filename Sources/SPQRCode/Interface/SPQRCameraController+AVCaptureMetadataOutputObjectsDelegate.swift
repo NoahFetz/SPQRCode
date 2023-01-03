@@ -100,18 +100,6 @@ extension SPQRCameraController: AVCaptureMetadataOutputObjectsDelegate {
         
         guard let string = object.stringValue else { return nil }
         
-        if let components = URLComponents(string: string), components.scheme != nil {
-            if let url = components.url {
-                return .url(url)
-            }
-        }
-        
-        let regex =  "^0x[a-fA-F0-9]{40}$"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
-        if predicate.evaluate(with: string){
-            return .ethWallet(string)
-        }
-        
         return .text(string)
     }
 }
