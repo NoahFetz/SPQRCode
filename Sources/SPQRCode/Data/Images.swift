@@ -32,7 +32,7 @@ enum Images {
     }
     
     static func detail_eth_wallet() -> UIImage {
-        return UIImage.init(named: "ethereum", in: bundle, compatibleWith: nil) ?? UIImage()
+        return .init(systemName: "textformat.alt")!
     }
     
     // MARK: - Internal
