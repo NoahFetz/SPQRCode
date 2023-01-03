@@ -67,7 +67,7 @@ open class SPQRCameraController: SPController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.global(qos: .default).async {
+        DispatchQueue.main.async {
             self.view.backgroundColor = .black
             self.view.layoutMargins = .init(horizontal: 20, vertical: .zero)
             self.view.layer.addSublayer(self.previewLayer)
