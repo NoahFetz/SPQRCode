@@ -68,19 +68,19 @@ open class SPQRCameraController: SPController {
         super.viewDidLoad()
         
         DispatchQueue.main.async {
-            view.backgroundColor = .black
-            view.layoutMargins = .init(horizontal: 20, vertical: .zero)
-            view.layer.addSublayer(previewLayer)
-            view.layer.addSublayer(frameLayer)
-            captureSession.startRunning()
+            self.view.backgroundColor = .black
+            self.view.layoutMargins = .init(horizontal: 20, vertical: .zero)
+            self.view.layer.addSublayer(previewLayer)
+            self.view.layer.addSublayer(frameLayer)
+            self.captureSession.startRunning()
             
-            view.addSubview(detailView)
-            view.addSubviews(handleButton, cancelButton)
+            self.view.addSubview(detailView)
+            self.view.addSubviews(handleButton, cancelButton)
             
-            handleButton.addTarget(self, action: #selector(didTapHandledButton), for: .touchUpInside)
-            cancelButton.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
+            self.handleButton.addTarget(self, action: #selector(didTapHandledButton), for: .touchUpInside)
+            self.cancelButton.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
             
-            updateInterface()
+            self.updateInterface()
         }
     }
     
