@@ -135,7 +135,11 @@ open class SPQRCameraController: SPController {
     
     internal static let supportedCodeTypes = [
         AVMetadataObject.ObjectType.aztec,
-        AVMetadataObject.ObjectType.qr
+        AVMetadataObject.ObjectType.qr,
+        AVMetadataObject.ObjectType.ean13,
+        AVMetadataObject.ObjectType.ean8
+        AVMetadataObject.ObjectType.dataMatrix,
+        AVMetadataObject.ObjectType.microQR
     ]
     
     internal func makeVideoPreviewLayer() -> AVCaptureVideoPreviewLayer {
