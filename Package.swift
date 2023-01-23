@@ -20,9 +20,6 @@ let package = Package(
             dependencies: [
                 .product(name: "NativeUIKit", package: "NativeUIKit"),
             ],
-            resources: [
-                .process("Resources")
-            ],
             swiftSettings: [
                 .define("SPQRCODE_SPM")
             ]

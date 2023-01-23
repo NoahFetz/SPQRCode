@@ -23,12 +23,12 @@ import Foundation
 
 enum Texts {
     
-    static var action_handle: String { NSLocalizedString("action handle", bundle: bundle, comment: "") }
-    static var action_cancel: String { NSLocalizedString("action cancel", bundle: bundle, comment: "") }
+    static var action_handle: String { NSLocalizedString("Scan", bundle: bundle, comment: "") }
+    static var action_cancel: String { NSLocalizedString("Abbrechen", bundle: bundle, comment: "") }
     
-    static var qr_code_data_text_prefix: String { NSLocalizedString("qr code data text prefix", bundle: bundle, comment: "") }
-    static var qr_code_data_url_prefix: String { NSLocalizedString("qr code data url prefix", bundle: bundle, comment: "") }
-    static var qr_code_data_eth_wallet_prefix: String { NSLocalizedString("qr code data eth wallet prefix", bundle: bundle, comment: "") }
+    static var qr_code_data_text_prefix: String { NSLocalizedString("Text", bundle: bundle, comment: "") }
+    static var qr_code_data_url_prefix: String { NSLocalizedString("Web", bundle: bundle, comment: "") }
+    static var qr_code_data_eth_wallet_prefix: String { NSLocalizedString("Wallet", bundle: bundle, comment: "") }
     
     
     // MARK: - Internal
