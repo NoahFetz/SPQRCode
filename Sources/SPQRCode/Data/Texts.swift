@@ -23,29 +23,10 @@ import Foundation
 
 enum Texts {
     
-    static var action_handle: String { NSLocalizedString("Scan", bundle: bundle, comment: "") }
-    static var action_cancel: String { NSLocalizedString("Abbrechen", bundle: bundle, comment: "") }
+    static var action_handle: String { "Scan" }
+    static var action_cancel: String { "Abbrechen" }
     
-    static var qr_code_data_text_prefix: String { NSLocalizedString("Text", bundle: bundle, comment: "") }
-    static var qr_code_data_url_prefix: String { NSLocalizedString("Web", bundle: bundle, comment: "") }
-    static var qr_code_data_eth_wallet_prefix: String { NSLocalizedString("Wallet", bundle: bundle, comment: "") }
-    
-    
-    // MARK: - Internal
-    
-    static var bundle: Bundle {
-        
-        // If installed via SPM, will be available bundle .module.
-        
-        #if SPQRCODE_SPM
-        return .module
-        #else
-        
-        // If installed via Cocoapods, should use bundle from podspec.
-        
-        let path = Bundle(for: SPQRCode.self).path(forResource: "SPQRCode", ofType: "bundle") ?? ""
-        let bundle = Bundle(path: path) ?? Bundle.main
-        return bundle
-        #endif
-    }
+    static var qr_code_data_text_prefix: String { "Text" }
+    static var qr_code_data_url_prefix: String { "Web" }
+    static var qr_code_data_eth_wallet_prefix: String { "Wallet" }
 }

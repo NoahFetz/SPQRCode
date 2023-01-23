@@ -34,22 +34,4 @@ enum Images {
     static func detail_eth_wallet() -> UIImage {
         return .init(systemName: "textformat.alt")!
     }
-    
-    // MARK: - Internal
-    
-    static var bundle: Bundle {
-        
-        // If installed via SPM, will be available bundle .module.
-        
-        #if SPQRCODE_SPM
-        return .module
-        #else
-        
-        // If installed via Cocoapods, should use bundle from podspec.
-        
-        let path = Bundle(for: SPQRCode.self).path(forResource: "SPQRCode", ofType: "bundle") ?? ""
-        let bundle = Bundle(path: path) ?? Bundle.main
-        return bundle
-        #endif
-    }
 }
